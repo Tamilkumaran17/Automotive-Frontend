@@ -1,0 +1,28 @@
+.container{
+  background: rgb(255, 255, 255);
+}
+
+body{
+  background: rgba(255, 255, 255, 0.586);
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+ 
+}
+
+body::-webkit-scrollbar{
+  background: transparent;
+}
+
+h1{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+
+}
+
+.content-blur{
+  transition: filter .4s ease-in-out;
+  z-index: 400;
+}

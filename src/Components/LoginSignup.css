@@ -1,0 +1,130 @@
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-end;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000; 
+  
+  }
+  
+  .popup-overlay.open {
+    right: 0;
+  }
+  
+  .popup-content {
+    background: white;
+    width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001; 
+    
+  }
+  .popup-content .user-info h2{
+    font-size: 28px;
+  }
+  .popup-content .user-info span {
+    font-size: 21px;
+    background: #1DC2E9;
+    background: linear-gradient(to right, #1DC2E9 13%, #0C0C91 87%);
+    
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    
+    color: transparent; 
+    -webkit-text-fill-color: transparent; 
+}
+
+  
+  .popup-content .user-info .logout-btn{
+    height: 30px;
+    margin-left: 10px;
+    width: 90px;
+    border-radius: 13px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+
+  }
+
+  .popup-content .user-info .logout-btn:hover{
+    transform: scale(1.1);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+  }
+
+  .close-btn {
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 1002; 
+    
+  }
+  
+  .form-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* border-bottom: 2px solid; */
+    /* border:2px solid; */
+    
+    text-align: center;
+  }
+
+  
+  .form-toggle button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+   
+  }
+  
+  .form-toggle .active {
+    font-weight: bold;
+    font-family: 'Poppins';
+  }
+  
+  .login-form, .signup-form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .login-form input, .signup-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-form button, .signup-form button {
+    padding: 10px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 150px;
+    margin-top: 17px;
+  }
+  
