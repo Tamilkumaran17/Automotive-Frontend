@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../Components/Header.css';
 import logo from '../assets/logo.jpg';
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { setSearchQuery } from "../redux/searchSlice";
 import LoginSignupPopup from "./LoginSignup";
 import { clearUser } from "../redux/userSlice";

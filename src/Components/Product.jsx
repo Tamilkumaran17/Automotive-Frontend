@@ -38,7 +38,7 @@ const isWishList = (item) => wishLists.some(wishList => {
 return item.id === wishList.id
 });
 
-const token = useSelector((state) => state.token.token)
+// const token = useSelector((state) => state.token.token)
 
 
 
@@ -49,6 +49,8 @@ if (!user) {
   toast.warning("Please login to add items to the cart.");
   return;
 }
+
+const token = localStorage.getItem('token');
 
 const cartItem = cartItems.filter((cart) => cart.productId === item.id);
 var quantity = 1;

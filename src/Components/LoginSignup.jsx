@@ -23,7 +23,8 @@ const handleLogin = async () => {
     const response = await axios.post("https://automotive-backend-ctzn.onrender.com/user/login", data);
 
     const {token}=response.data;
-    dispatch(setToken(token));
+    localStorage.setItem('token', token);
+    // dispatch(setToken(token));
     dispatch(initCart(response.data.cartItems))
   
     
@@ -104,4 +105,5 @@ return (
 };
 
 export default LoginSignupPopup;
+
 

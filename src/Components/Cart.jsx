@@ -30,6 +30,8 @@ const Cart = () => {
 
 
   const handleIncrement = async(item,quantity) => {
+  const token = localStorage.getItem('token');
+
     playSound();
     const response = await axios.put(`https://automotive-backend-ctzn.onrender.com/cart/put/${item.productId}`,{quantity:item.quantity+quantity},{headers:{
       Authorization : "Bearer "+token
@@ -38,6 +40,7 @@ const Cart = () => {
   }
 
   const handleClear = async() => {
+    const token = localStorage.getItem('token');
     const response = await axios.delete(`https://automotive-backend-ctzn.onrender.com/cart/deleteall`,{headers:{
       Authorization : "Bearer "+token
     }});
@@ -52,6 +55,7 @@ const Cart = () => {
 
   const handleRemove = async(item) => {
     console.log(item);  
+    const token = localStorage.getItem('token');
     const response = await axios.delete(`https://automotive-backend-ctzn.onrender.com/cart/carts/delete/${item.productId}`,{headers:{
       Authorization : "Bearer "+token
     }});
@@ -82,6 +86,7 @@ const Cart = () => {
     
   }
   const handleCartGetAPI = async()=>{
+    const token = localStorage.getItem('token');
     await axios.get("https://automotive-backend-ctzn.onrender.com/cart/get",{headers:{
       Authorization : "Bearer "+token
     }}).then((res)=>{
