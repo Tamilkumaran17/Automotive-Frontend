@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  esbuild: {
+    target: 'es2022',
+  },
   build: {
     target: ['es2022', 'chrome89', 'edge89', 'firefox79', 'safari14.1'],
   },
