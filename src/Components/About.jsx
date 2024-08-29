@@ -20,7 +20,7 @@ const About = () =>{
 <section class="about-section">
   <div class="about">
     <h1>About Us</h1>
-    <p>Welcome to Automotive E-commerce web-Application, your one-stop destination for all things related to bikes and car accessories. Established in [Year], we have grown from a small start-up into a trusted online store, providing a wide range of high-quality products at competitive prices.</p>
+    <p>Welcome to Automotive E-commerce web-Application, your one-stop destination for all things related to bikes and car accessories. Established in 2024, we have grown from a small start-up into a trusted online store, providing a wide range of high-quality products at competitive prices.</p>
 
     <h2>Our Mission</h2>
     <p>At Automotive E-commerce web-Application, our mission is to enhance your driving and riding experience by offering the best products on the market. We believe in quality, affordability, and customer satisfaction, and we strive to bring you the latest innovations in automotive accessories.</p>
