@@ -20,7 +20,7 @@ const dispatch = useDispatch();
 const handleLogin = async () => {
   try {
     const data = { name, password };
-    const response = await axios.post("https://automotive-backend-ctzn.onrender.com/user/login", data);
+    const response = await axios.post("https://automotive-backend.vercel.app/user/login", data);
 
     const {token}=response.data;
     localStorage.setItem('token', token);
@@ -53,7 +53,7 @@ const handleLogin = async () => {
 const handleSignup = async () => {
   try {
     const data = { name, email, password };
-    const response = await axios.post("https://automotive-backend-ctzn.onrender.com/user/signup", data);
+    const response = await axios.post("https://automotive-backend.vercel.app/user/signup", data);
 
     
     dispatch(setUser(response.data.user));

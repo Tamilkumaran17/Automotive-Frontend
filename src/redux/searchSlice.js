@@ -79,7 +79,7 @@ const fetchProducts = async () => {
     
     
     try {
-        const response = await axios.get("https://automotive-backend-ctzn.onrender.com/products",);
+        const response = await axios.get("https://automotive-backend.vercel.app/products",);
         return response.data;
 
     } catch (error) {
