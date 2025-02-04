@@ -89,8 +89,16 @@ const fetchProducts = async () => {
 };
 
 
-const products = await fetchProducts();
-
+// const products = await fetchProducts();
+async function loadProducts() {
+    const products = await fetchProducts();
+    return products;
+  }
+  
+  loadProducts().then((products) => {
+    console.log(products);
+  });
+  
 const searchSlice = createSlice({
     name: "search",
     initialState: {
