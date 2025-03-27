@@ -10,7 +10,7 @@ import'@fortawesome/fontawesome-free/css/all.min.css'
 import WishList from './Components/WishList';
 import About from './Components/About';
 import ProductList from './Components/ProductList';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import LoginSignupPopup from './Components/LoginSignup';
 import Order from './Components/Order';
