@@ -6,7 +6,7 @@ import slash from '../sounds/slash.mp3'
 import { Link, useNavigate } from "react-router-dom";
 import { setProducts } from "../redux/ProductList.js";
 import axios from "axios";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 
 

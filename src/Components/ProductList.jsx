@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { add } from "../redux/cartSlice";
 import click from "../sounds/add-to-cart-click.mp3"
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { addWishList, removeWishList } from "../redux/wishListSlice";
 
 
@@ -34,7 +34,7 @@ const ProductList= ()=>{
 
     const toggleWish = (item) => {
         if (!user) { 
-            toast.warning("Please login to add items to the wishlist.");
+            // toast.warning("Please login to add items to the wishlist.");
             return;
           }
 
@@ -52,7 +52,7 @@ const ProductList= ()=>{
 
 const handlecart = async(item) =>{
     if (!user) { 
-        toast.warning("Please login to add items to the cart.");
+        // toast.warning("Please login to add items to the cart.");
         return;
       }
 
@@ -76,7 +76,7 @@ const handlecart = async(item) =>{
       // if (response.status == 200) toast.info("Added to cart");
       // else toast.error("err to cart");
 
-      toast.info("Added to cart");
+    //   toast.info("Added to cart");
       
        dispatch(add(item))
     playSound()

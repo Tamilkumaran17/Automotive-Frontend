@@ -6,7 +6,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { setSearchQuery } from "../redux/searchSlice";
 import LoginSignupPopup from "./LoginSignup";
 import { clearUser } from "../redux/userSlice";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const Header = () => {
   const cartItems = useSelector((state) => state.cart.items);

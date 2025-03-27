@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Components/LoginSignup.css';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -35,7 +35,7 @@ const handleLogin = async () => {
 
     // Store user data in global state
     dispatch(setUser(response.data.user));
-    toast.success("Login Successfully done");
+    // toast.success("Login Successfully done");
     
 
     // Redirect to products page
@@ -46,7 +46,7 @@ const handleLogin = async () => {
 
   } catch (error) {
     console.error("Login failed:", error);
-    toast.error("Login failed. Please try again.");
+    // toast.error("Login failed. Please try again.");
   }
 };
 
@@ -57,13 +57,13 @@ const handleSignup = async () => {
 
     
     dispatch(setUser(response.data.user));
-    toast.success("SignUp Successfully done");   
+    // toast.success("SignUp Successfully done");   
     navigate('/');    
     onClose();
 
   } catch (error) {
     console.error("Signup failed:", error);
-    toast.error("Signup failed. Please try again.");
+    // toast.error("Signup failed. Please try again.");
   }
 };
 return (

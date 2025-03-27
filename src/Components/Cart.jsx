@@ -5,7 +5,7 @@ import { remove, clear, update, decrement, initCart } from '../redux/cartSlice';
 import beep  from '../sounds/beep.mp3'
 import slash  from '../sounds/slash.mp3'
 import axios from "axios"
-import {toast} from 'react-toastify'
+// import {toast} from 'react-toastify'
 import { Link } from 'react-router-dom';
 
 
@@ -92,7 +92,7 @@ const Cart = () => {
     }}).then((res)=>{
       dispatch(initCart(res.data.cartItems));
     }).catch((error)=>{
-      toast.error(error.message);
+      // toast.error(error.message);
     })
   }
 

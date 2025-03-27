@@ -11,7 +11,7 @@ import { addWishList, removeWishList } from "../redux/wishListSlice.js";
 import anime from '../sounds/anime.mp3';
 import chin from '../sounds/chin_tapak_dum_dum.mp3';
 import { setProducts } from "../redux/ProductList.js";
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import axios from 'axios'
 
 
@@ -46,7 +46,7 @@ return item.id === wishList.id
 
 const toggleCart = async (item) => {
 if (!user) {
-  toast.warning("Please login to add items to the cart.");
+  // toast.warning("Please login to add items to the cart.");
   return;
 }
 
@@ -69,8 +69,10 @@ const response = await axios.post("https://automotive-backend-ctzn.onrender.com/
     Authorization: "Bearer " + token
   }
 });
-if (response.status == 200) toast.info("Added to cart");
-else toast.error("err to cart");
+// if (response.status == 200) 
+//   // toast.info("Added to cart");
+// else 
+// // toast.error("err to cart");
 dispach(add(item));
 playSound();
 }
